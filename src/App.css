@@ -1,0 +1,125 @@
+/* src/App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+/* Master Fixed Layout Header */
+.navbar-fixed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 1rem 2rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-links-row {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-links-row button {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.nav-links-row button:hover {
+  color: white;
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Highlight Selected Active Tab */
+.nav-links-row button.active-tab {
+  color: white;
+  background-color: #ff0000;
+}
+
+/* Clean Main Form Cards Layout */
+.content-area {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card, .form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-fields-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-container label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.form-select, .form-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-select {
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #ea580c;
+}
+
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-logo-img {
+  height: 35px; 
+  width: auto;  
+  object-fit: contain;
+}
