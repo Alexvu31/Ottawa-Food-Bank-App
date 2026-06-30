@@ -67,6 +67,10 @@ function App() {
         campaigns:"",
         materialsproduced:"",
         proposals:"",
+        surveys:"",
+        wellbeing:"",
+        security:"",
+        implemented:"",
       });
     } catch (error) {
       console.error(error);
@@ -113,7 +117,6 @@ function App() {
         </ul>
       </nav>
 
-      {/* RENDER SECTIONS DIRECTLY */}
       <main className="content-area">
         {currentTab === "home" && (
           <div className="card">
@@ -135,6 +138,7 @@ function App() {
               <option value="client">Client Engagement and Assessment</option>
               <option value="staffing">Engagement, Staffing, & Training</option>
               <option value="training">Capacity Building & Training (Ottawa Food Bank)</option>
+              <option value="annual">Annual Outcome Evaluation (Ottawa Food Bank)</option>
             </select>
 
             <form onSubmit={handleSubmit} className="report-form">
@@ -364,6 +368,48 @@ function App() {
                     onChange={handleChange}
                     required
                   />
+                  
+                </div>
+              )}
+
+              {reportType === "annual" && (
+                <div className="form-fields-group">
+                  <label>Clients Participating in Follow-up Surverys</label>
+                  <input
+                    type="number"
+                    name="surveys"
+                    value={formData.surveys || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Clients Reporting Enhanced Wellbeing/Stability(%)</label>
+                  <input
+                    type="number"
+                    name="wellbeing"
+                    value={formData.wellbeing || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Clients Reporting Improved Food Security</label>
+                  <input
+                    type="number"
+                    name="security"
+                    value={formData.security || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>WASI Service Delivery Improvements Implemented</label>
+                  <input
+                    type="number"
+                    name="implemented"
+                    value={formData.implemented || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
                   
                 </div>
               )}
