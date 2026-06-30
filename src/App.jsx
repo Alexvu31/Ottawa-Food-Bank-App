@@ -496,6 +496,8 @@ function App() {
                     required
                   />
 
+
+
                 </div>
               )}
 
@@ -507,11 +509,31 @@ function App() {
         )}
 
         {currentTab === "success-stories" && (
-          <div className="card">
-            <h2>Success Stories</h2>
-            <p>Content panel coming soon.</p>
-          </div>
-        )}
+  <div className="flex flex-col md:flex-row gap-6 w-full p-6 text-left items-start">
+    
+    <div className="w-full md:w-3/5 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-semibold text-slate-900 mb-2">Main Content Form</h2>
+      <p className="text-sm text-slate-500 mb-4">This side takes up more layout room.</p>
+      <div className="form-fields-group">
+                  <label>Community Events Focused on WAS Promotion</label>
+                  <input
+                    type="number"
+                    name="promotion"
+                    value={formData.promotion || ""}
+                    onChange={handleChange}
+                    required
+                  />
+        </div>
+    </div>
+
+    <div className="w-full md:w-3/5 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-semibold text-slate-900 mb-2">Main Content Form</h2>
+      <p className="text-sm text-slate-500 mb-4">This side takes up more layout room.</p>
+      {/* Form elements go here */}
+    </div>
+
+  </div>
+)}
 
         {currentTab === "audit-logs" && (
           <div className="card">
