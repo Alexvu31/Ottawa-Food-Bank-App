@@ -51,6 +51,22 @@ function App() {
         clientprogress: "",
         engaged: "",
         datasharing: "",
+        workshops: "",
+        staff:"",
+        referraltraining:"",
+        confidence:"",
+        practice:"",
+        delivered:"",
+        training:"",
+        materials:"",
+        advocacy:"",
+        policy:"",
+        workshops:"",
+        participantconfidence:"",
+        fundraising:"",
+        campaigns:"",
+        materialsproduced:"",
+        proposals:"",
       });
     } catch (error) {
       console.error(error);
@@ -118,6 +134,7 @@ function App() {
             >
               <option value="client">Client Engagement and Assessment</option>
               <option value="staffing">Engagement, Staffing, & Training</option>
+              <option value="training">Capacity Building & Training (Ottawa Food Bank)</option>
             </select>
 
             <form onSubmit={handleSubmit} className="report-form">
@@ -198,6 +215,156 @@ function App() {
                     onChange={handleChange}
                     required
                   />
+
+                  <label>Professional Dev Sessions/Workshops Delivered</label>
+                  <input
+                    type="number"
+                    name="workshops"
+                    value={formData.workshops || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>WAS Staff Hired, Trained & Embedded</label>
+                  <input
+                    type="number"
+                    name="staff"
+                    value={formData.staff || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>WAS Staff Trained in Promising Referral Practices</label>
+                  <input
+                    type="number"
+                    name="referraltraining"
+                    value={formData.referraltraining || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Staff Reporting Increased Confidence (%)</label>
+                  <input
+                    type="number"
+                    name="confidence"
+                    value={formData.confidence || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Food Banks and WAS Staff Community of Practice</label>
+                  <input
+                    type="number"
+                    name="practice"
+                    value={formData.practice || ""}
+                    onChange={handleChange}
+                    required
+                  />
+                  
+                </div>
+              )}
+
+              {reportType === "training" && (
+                <div className="form-fields-group">
+                  <label>Training Sessions Delivered (Comms/Fundraising/Advocacy)</label>
+                  <input
+                    type="number"
+                    name="delivered"
+                    value={formData.delivered || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Food Bank Leaders Participating in Training</label>
+                  <input
+                    type="number"
+                    name="training"
+                    value={formData.training || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Training Materials or Toolkits Developed</label>
+                  <input
+                    type="number"
+                    name="datasharing"
+                    value={formData.datasharing || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Food Banks Participating in Advocacy Events</label>
+                  <input
+                    type="number"
+                    name="advocacy"
+                    value={formData.advocacy || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Policymakers or Partners Engaged</label>
+                  <input
+                    type="number"
+                    name="policy"
+                    value={formData.policy || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>CEFB Workshops / Cross-Training Offered</label>
+                  <input
+                    type="number"
+                    name="workshops"
+                    value={formData.workshops || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Participants Reporting Increased Confidence (%)</label>
+                  <input
+                    type="number"
+                    name="participantconfidence"
+                    value={formData.participantconfidence || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Food Banks Developing / Refining Fundraising Plans</label>
+                  <input
+                    type="number"
+                    name="fundraising"
+                    value={formData.fundraising || ""}
+                    onChange={handleChange}
+                    required
+                  />
+                  
+                  <label>Advocacy Campaigns Launched</label>
+                  <input
+                    type="number"
+                    name="campaigns"
+                    value={formData.campaigns || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Advocacy Materials Produced (Briefs, Releases)</label>
+                  <input
+                    type="number"
+                    name="materialsproduced"
+                    value={formData.materialsproduced || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Policy or Funding Proposals Submitted</label>
+                  <input
+                    type="number"
+                    name="proposals"
+                    value={formData.proposals || ""}
+                    onChange={handleChange}
+                    required
+                  />
+                  
                 </div>
               )}
 
