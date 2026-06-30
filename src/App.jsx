@@ -71,6 +71,14 @@ function App() {
         wellbeing:"",
         security:"",
         implemented:"",
+        promotion:"",
+        fundraising:"",
+        application:"",
+        distributed:"",
+        communication:"",
+        appsubmit:"",
+        community:"",
+        partipation:"",
       });
     } catch (error) {
       console.error(error);
@@ -137,8 +145,9 @@ function App() {
             >
               <option value="client">Client Engagement and Assessment</option>
               <option value="staffing">Engagement, Staffing, & Training</option>
-              <option value="training">Capacity Building & Training (Ottawa Food Bank)</option>
+              <option value="training">Capacity Building & Training (Ottawa Food Bank)</option>              
               <option value="annual">Annual Outcome Evaluation (Ottawa Food Bank)</option>
+              <option value="leadership"> Communication, Fundraising & Advocacy (Network Leadership)</option>
             </select>
 
             <form onSubmit={handleSubmit} className="report-form">
@@ -410,7 +419,83 @@ function App() {
                     required
                   />
 
-                  
+                </div>
+              )}
+
+              {reportType === "leadership" && (
+                <div className="form-fields-group">
+                  <label>Community Events Focused on WAS Promotion</label>
+                  <input
+                    type="number"
+                    name="promotion"
+                    value={formData.promotion || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Fundraising Campaigns Launched</label>
+                  <input
+                    type="number"
+                    name="fundraising"
+                    value={formData.fundraising || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Successful Grant Applications</label>
+                  <input
+                    type="number"
+                    name="application"
+                    value={formData.application || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Advocacy Awareness Materials Distributed</label>
+                  <input
+                    type="number"
+                    name="distributed"
+                    value={formData.distributed || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>New Communication Materials Created</label>
+                  <input
+                    type="number"
+                    name="communication"
+                    value={formData.communication || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Grant Applications Submitted (Capacity/Reach)</label>
+                  <input
+                    type="number"
+                    name="appsubmit"
+                    value={formData.appsubmit || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Community Engagement Events Related to Advocacy</label>
+                  <input
+                    type="number"
+                    name="community"
+                    value={formData.community || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <label>Clients/Members Participating in Advocacy</label>
+                  <input
+                    type="number"
+                    name="participation"
+                    value={formData.participation || ""}
+                    onChange={handleChange}
+                    required
+                  />
+
                 </div>
               )}
 
